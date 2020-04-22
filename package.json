@@ -3,9 +3,6 @@
   "version": "1.0.1",
   "description": "use canuse in terminal",
   "main": "index.js",
-  "scripts": {
-    "release": "dotenv release-it"
-  },
   "bin": {
     "caniuse": "./index.js"
   },
@@ -37,9 +34,7 @@
   },
   "devDependencies": {
     "chalk": "^4.0.0",
-    "dotenv-cli": "^3.1.0",
-    "ora": "^4.0.3",
-    "release-it": "^13.5.5"
+    "ora": "^4.0.3"
   },
   "prettier": {
     "arrowParens": "avoid",
@@ -53,10 +48,5 @@
     "trailingComma": "none",
     "requirePragma": true,
     "useTabs": true
-  },
-  "release-it": {
-    "github": {
-      "release": true
-    }
   }
 }
