@@ -25,13 +25,14 @@
   },
   "homepage": "https://github.com/funnyPan/caniuse#readme",
   "dependencies": {
+    "chalk": "^4.0.0",
     "cli-html": "^1.7.0",
     "commander": "^5.0.0",
     "dayjs": "^1.8.25",
     "fs-extra": "^9.0.0",
     "got": "^11.0.0",
+    "inquirer": "^7.1.0",
     "lodash": "^4.17.15",
-    "chalk": "^4.0.0",
     "ora": "^4.0.3"
   },
   "prettier": {
