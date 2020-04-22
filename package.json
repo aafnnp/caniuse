@@ -1,11 +1,8 @@
 {
-  "name": "caniuse-shell",
-  "version": "1.0.0",
+  "name": "caniuse-xx",
+  "version": "1.0.1",
   "description": "use canuse in terminal",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "bin": {
     "caniuse": "./index.js"
   },
@@ -19,23 +16,26 @@
   ],
   "author": "",
   "license": "MIT",
+  "git": {
+    "requireCleanWorkingDir": false,
+    "commitMessage": "chore: release v${version}"
+  },
   "bugs": {
     "url": "https://github.com/funnyPan/caniuse/issues"
   },
   "homepage": "https://github.com/funnyPan/caniuse#readme",
   "dependencies": {
+    "chalk": "^4.0.0",
     "cli-html": "^1.7.0",
     "commander": "^5.0.0",
     "dayjs": "^1.8.25",
     "fs-extra": "^9.0.0",
     "got": "^11.0.0",
-    "lodash": "^4.17.15"
-  },
-  "devDependencies": {
-    "chalk": "^4.0.0",
+    "inquirer": "^7.1.0",
+    "lodash": "^4.17.15",
     "ora": "^4.0.3"
   },
-  "prettier":{
+  "prettier": {
     "arrowParens": "avoid",
     "bracketSpacing": false,
     "jsxBracketSameLine": false,
@@ -47,5 +47,5 @@
     "trailingComma": "none",
     "requirePragma": true,
     "useTabs": true
-}
+  }
 }
