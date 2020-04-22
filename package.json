@@ -1,6 +1,6 @@
 {
   "name": "caniuse-xx",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "use canuse in terminal",
   "main": "index.js",
   "bin": {
@@ -30,9 +30,7 @@
     "dayjs": "^1.8.25",
     "fs-extra": "^9.0.0",
     "got": "^11.0.0",
-    "lodash": "^4.17.15"
-  },
-  "devDependencies": {
+    "lodash": "^4.17.15",
     "chalk": "^4.0.0",
     "ora": "^4.0.3"
   },
