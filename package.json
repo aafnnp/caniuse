@@ -1,10 +1,10 @@
 {
-  "name": "caniuse-shell",
+  "name": "caniuse-xx",
   "version": "1.0.0",
   "description": "use canuse in terminal",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "dotenv release-it"
   },
   "bin": {
     "caniuse": "./index.js"
@@ -19,6 +19,10 @@
   ],
   "author": "",
   "license": "MIT",
+  "git":{
+    "requireCleanWorkingDir": false,
+    "commitMessage": "chore: release v${version}"
+  },
   "bugs": {
     "url": "https://github.com/funnyPan/caniuse/issues"
   },
@@ -33,9 +37,11 @@
   },
   "devDependencies": {
     "chalk": "^4.0.0",
-    "ora": "^4.0.3"
+    "dotenv-cli": "^3.1.0",
+    "ora": "^4.0.3",
+    "release-it": "^13.5.5"
   },
-  "prettier":{
+  "prettier": {
     "arrowParens": "avoid",
     "bracketSpacing": false,
     "jsxBracketSameLine": false,
@@ -47,5 +53,10 @@
     "trailingComma": "none",
     "requirePragma": true,
     "useTabs": true
-}
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
+  }
 }
