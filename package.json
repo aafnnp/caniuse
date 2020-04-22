@@ -1,6 +1,6 @@
 {
   "name": "caniuse-xx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "use canuse in terminal",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   ],
   "author": "",
   "license": "MIT",
-  "git":{
+  "git": {
     "requireCleanWorkingDir": false,
     "commitMessage": "chore: release v${version}"
   },
