@@ -10,7 +10,7 @@ const update = require("./lib/update.js")
 const inquirer = require('inquirer')
 
 const GetData = async () => {
-    const JsonData = await fs.readJSON("./data.json")
+    const JsonData = await fs.readJSON("./node_modules/caniuse-db/data.json")
     const { updated } = _.pick(JsonData, "updated")
     const pickData = _.pick(JsonData, "data")
     return { updated, pickData }
