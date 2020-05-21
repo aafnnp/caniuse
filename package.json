@@ -1,6 +1,6 @@
 {
   "name": "caniuse-xx",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "use canuse in terminal",
   "main": "index.js",
   "bin": {
@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/funnyPan/caniuse#readme",
   "dependencies": {
-    "caniuse-db": "^1.0.30001046",
+    "caniuse-db": "^1.0.30001063",
     "chalk": "^4.0.0",
-    "cli-html": "^1.8.0",
+    "cli-html": "^1.8.2",
     "commander": "^5.1.0",
-    "dayjs": "^1.8.25",
+    "dayjs": "^1.8.27",
     "fs-extra": "^9.0.0",
     "inquirer": "^7.1.0",
     "lodash": "^4.17.15",

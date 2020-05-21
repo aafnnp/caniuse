@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const chalk = require('chalk');
+const path = require('path');
 const fs = require("fs-extra")
 const { program } = require("commander")
 const { version } = require("./package.json")
@@ -10,7 +11,8 @@ const update = require("./lib/update.js")
 const inquirer = require('inquirer')
 
 const GetData = async () => {
-    const JsonData = await fs.readJSON("./node_modules/caniuse-db/data.json")
+    const JsonData = await fs.readJSON(path.join(__dirname, "./node_modules/caniuse-db/data.json"));
+    // console.log(JsonData)
     const { updated } = _.pick(JsonData, "updated")
     const pickData = _.pick(JsonData, "data")
     return { updated, pickData }
