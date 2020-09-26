@@ -25,15 +25,15 @@
   },
   "homepage": "https://github.com/funnyPan/caniuse#readme",
   "dependencies": {
-    "caniuse-db": "^1.0.30001102",
+    "caniuse-db": "^1.0.30001137",
     "chalk": "^4.0.0",
     "cli-html": "^1.8.2",
     "commander": "^5.1.0",
-    "dayjs": "^1.8.29",
+    "dayjs": "^1.8.36",
     "fs-extra": "^9.0.0",
-    "inquirer": "^7.3.2",
-    "lodash": "^4.17.19",
-    "ora": "^4.0.5"
+    "inquirer": "^7.3.3",
+    "lodash": "^4.17.20",
+    "ora": "^4.1.1"
   },
   "prettier": {
     "arrowParens": "avoid",
