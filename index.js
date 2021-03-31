@@ -9,12 +9,12 @@ const dayjs = require('dayjs')
 const html = require("./lib/html.js")
 const update = require("./lib/update.js")
 const inquirer = require('inquirer')
+const got = require("got")
 
 const GetData = async () => {
-    const JsonData = await fs.readJSON(path.join(__dirname, "./node_modules/caniuse-db/data.json"));
-    // console.log(JsonData)
-    const { updated } = _.pick(JsonData, "updated")
-    const pickData = _.pick(JsonData, "data")
+    const {body} = await got("https://raw.githubusercontent.com/Fyrd/caniuse/main/data.json");
+    const { updated } = _.pick(body, "updated")
+    const pickData = _.pick(body, "data")
     return { updated, pickData }
 }
 
