@@ -1,10 +1,10 @@
 {
   "name": "caniuse-xx",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "use caniuse in terminal",
   "main": "index.js",
   "bin": {
-    "caniuse": "./index.js"
+    "caniuse": "index.js"
   },
   "repository": {
     "type": "git",
