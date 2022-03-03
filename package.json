@@ -1,8 +1,9 @@
 {
   "name": "caniuse-xx",
-  "version": "1.0.11",
+  "version": "2.0.0",
   "description": "use caniuse in terminal",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "caniuse": "index.js"
   },
@@ -25,16 +26,16 @@
   },
   "homepage": "https://github.com/manonicu/caniuse#readme",
   "dependencies": {
-    "caniuse-db": "^1.0.30001242",
-    "chalk": "^4.1.1",
-    "cli-html": "^1.8.4",
-    "commander": "^8.0.0",
-    "dayjs": "^1.10.5",
-    "fs-extra": "^10.0.0",
-    "got": "^11.8.2",
-    "inquirer": "^8.1.1",
-    "lodash": "^4.17.21",
-    "ora": "^5.4.1"
+    "axios": "^0.26.0",
+    "chalk": "^5.0.0",
+    "cli-html": "^2.1.8",
+    "commander": "^9.0.0",
+    "dayjs": "^1.10.8",
+    "fs-extra": "^10.0.1",
+    "inquirer": "^8.2.0",
+    "lodash-es": "^4.17.21",
+    "node-fetch": "^3.2.1",
+    "ora": "^6.1.0"
   },
   "prettier": {
     "arrowParens": "avoid",

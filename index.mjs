@@ -1,26 +1,26 @@
 #!/usr/bin/env node
-const chalk = require('chalk');
-const path = require('path');
-const fs = require("fs-extra")
-const { program } = require("commander")
-const { version } = require("./package.json")
-const _ = require("lodash")
-const dayjs = require('dayjs')
-const html = require("./lib/html.js")
-const update = require("./lib/update.js")
-const inquirer = require('inquirer')
-const got = require("got")
+import axios from 'axios';
+import chalk from 'chalk';
+import { program } from "commander";
+import dayjs from 'dayjs';
+import inquirer from 'inquirer';
+import { pick } from "lodash-es";
+import { createRequire } from 'module';
+import html from "./lib/html.mjs";
+import update from "./lib/update.mjs";
+const require = createRequire(import.meta.url);
+const {version} = require('./package.json')
 
 const GetData = async () => {
-    const {body} = await got("https://raw.githubusercontent.com/Fyrd/caniuse/main/data.json");
-    const { updated } = _.pick(body, "updated")
-    const pickData = _.pick(body, "data")
+    const response = await axios("https://raw.githubusercontent.com/Fyrd/caniuse/main/data.json");
+    const { updated } = pick(response.data, "updated")
+    const pickData = pick(response.data, "data")
     return { updated, pickData }
 }
 
 const SearchKey = async key => {
     const { updated, pickData } = await GetData();
-    const result = _.pick(pickData.data, key)
+    const result = pick(pickData.data, key)
     const { stats } = result[key]
     let response = {};
     for await (let [key, value] of Object.entries(stats)) {
@@ -50,7 +50,7 @@ program
                 await SearchKey(key)
             } catch (error) {
                 const { pickData } = await GetData()
-                const { data } = _.pick(pickData, "data")
+                const { data } = pick(pickData, "data")
                 const keys = Object.keys(data).filter(v => v.includes(key));
                 inquirer.prompt([
                     {
