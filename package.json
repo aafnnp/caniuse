@@ -1,6 +1,6 @@
 {
   "name": "caniuse-xx",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "use caniuse in terminal",
   "main": "index.js",
   "type": "module",
